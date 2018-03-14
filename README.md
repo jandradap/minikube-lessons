@@ -1,2 +1,0 @@
-# minikube-lessons
-minikube lessons
