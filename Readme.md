@@ -24,19 +24,21 @@ apt-get install bash-completion
 echo "source <(kubectl completion bash)" >> ~/.bashrc
 ```
 
-## Comandos de minikube
+## Minikube commands
 
 ```shell
 minikube stop/start/delete/status
 minikube dashboard # habilita el dashboard
-minikube service ejemplo-nginx # abre web del servicio
-minikube ssh # entra en el nodo
+minikube ssh #ssh to node
+minikube service webserver #open the service in url
+curl -sSL $(minikube service --url webserver) #get service url
 ```
 
+### Update container image
 
-
-
-
+```
+kubectl set image deployment/nginx-deployment nginx=jorgeandrada/nginx-autoindex
+```
 
 ## Use local images in minikube
 So to use a image without uploading it you can follow these steps:
@@ -46,15 +48,3 @@ So to use a image without uploading it you can follow these steps:
 - set the image in the pod spec like the build tag (eg my-image)
 - set the **imagePullPolicy** to Never, otherwise Kubernetes will try to download the image
 - update deployment ```kubectl set image deployment/nginx-deployment nginx=prueba:1```
-
-kubectl set image deployment/nginx-deployment nginx=jorgeandrada/nginx-autoindex
-
-minikube service webserver
-
-curl -sSL $(minikube service --url webserver)
-
-docker build -t test:latest .
-kubectl set image deployment/nginx-deployment nginx=nginx:alpine
-kubectl set image deployment/nginx-deployment nginx=test
-docker build -t test:v2 .
-kubectl set image deployment/nginx-deployment nginx=test:v2
