@@ -33,14 +33,15 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc
 minikube stop/start/delete/status
 minikube dashboard # habilita el dashboard
 minikube ssh #ssh to node
-minikube service webserver #open the service in url
-curl -sSL $(minikube service --url webserver) #get service url
+minikube service prueba #open the service in url
+curl -sSL $(minikube service --url prueba) #get service url
 ```
 
+kubectl scale --replicas=1 deployment prueba-nginx
 ### Update container image
 
 ```
-kubectl set image deployment/nginx-deployment nginx=jorgeandrada/nginx-autoindex
+kubectl set image deployment/prueba-nginx nginx=jorgeandrada/minikube-lessons:release-1.1
 ```
 
 ## Use local images in minikube
