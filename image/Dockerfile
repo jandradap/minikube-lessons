@@ -16,3 +16,6 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 			org.label-schema.docker.cmd=""
 
 COPY html /usr/share/nginx/html
+
+
+#CMD ["sh", "-c", "'sed -i s/MODIFICAR/$HOSTNAME/g /usr/share/nginx/html/index.html'", ";", "nginx", "-g", "daemon off;"]
