@@ -17,5 +17,6 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 
 COPY html /usr/share/nginx/html
 
+COPY entrypoint.sh /root
 
-#CMD ["sh", "-c", "'sed -i s/MODIFICAR/$HOSTNAME/g /usr/share/nginx/html/index.html'", ";", "nginx", "-g", "daemon off;"]
+ENTRYPOINT ["/root/entrypoint.sh"]
