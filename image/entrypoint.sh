@@ -13,4 +13,4 @@
 # trap read debug
 
 sed -i "s/MODIFICAR/$HOSTNAME/g" /usr/share/nginx/html/index.html
-nginx -g daemon off;
+nginx -g "daemon off;"
