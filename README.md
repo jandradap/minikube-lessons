@@ -1,6 +1,6 @@
-# minikube-lessons [![](https://images.microbadger.com/badges/version/jorgeandrada/minikube-lessons:develop.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons:develop "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/jorgeandrada/minikube-lessons:develop.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons:develop "Get your own image badge on microbadger.com")
+# minikube-lessons [![](https://images.microbadger.com/badges/version/jorgeandrada/minikube-lessons:master.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons:master "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/jorgeandrada/minikube-lessons:master.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons:master "Get your own image badge on microbadger.com")
 
-![](https://raw.githubusercontent.com/jandradap/minikube-lessons/develop/minikube.jpg)
+![](https://raw.githubusercontent.com/jandradap/minikube-lessons/master/minikube.jpg)
 
 ## Install
 
