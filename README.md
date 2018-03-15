@@ -1,4 +1,4 @@
-# minikube-lessons [![](https://images.microbadger.com/badges/version/jorgeandrada/minikube-lessons:master.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons:master "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/jorgeandrada/minikube-lessons:master.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons:master "Get your own image badge on microbadger.com")
+# minikube-lessons [![](https://images.microbadger.com/badges/image/jorgeandrada/minikube-lessons.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/jorgeandrada/minikube-lessons.svg)](https://microbadger.com/images/jorgeandrada/minikube-lessons "Get your own version badge on microbadger.com")
 
 ![](https://raw.githubusercontent.com/jandradap/minikube-lessons/master/minikube.jpg)
 
@@ -36,6 +36,23 @@ minikube ssh #ssh to node
 minikube service prueba #open the service in url
 curl -sSL $(minikube service --url prueba) #get service url
 ```
+
+## Deploy app
+kubectl apply -f prueba-deployment.yml
+kubectl describe pod XXXXX
+$ curl 172.17.0.4
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Updated!</title>
+  </head>
+  <body>
+    <center><img src="minikube.jpg"></center>
+    <p><center><h1>yeaaaaaaaaah!</h1></center></p>
+  </body>
+</html>
+
 
 kubectl scale --replicas=1 deployment prueba-nginx
 ### Update container image
