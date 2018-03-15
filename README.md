@@ -33,8 +33,8 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc
 minikube stop/start/delete/status
 minikube dashboard # habilita el dashboard
 minikube ssh #ssh to node
-minikube service prueba #open the service in url
-curl -sSL $(minikube service --url prueba) #get service url
+minikube service ejemplo-nginx-servicio #open the service in url
+curl -sSL $(minikube service --url ejemplo-nginx-servicio) #get service url
 ```
 
 ## Deploy app
