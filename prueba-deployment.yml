@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:alpine
+        image: jorgeandrada/minikube-lessons:1.0
         ports:
         - containerPort: 80
