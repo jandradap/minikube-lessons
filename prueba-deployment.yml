@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prueba-nginx
+  labels:
+    app: pruebaenlacesvc
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: prueba
+  template:
+    metadata:
+      labels:
+        app: prueba
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80

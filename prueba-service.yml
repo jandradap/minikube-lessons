@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prueba
+spec:
+  ports:
+  - name: nginx
+    port: 80
+    targetPort: nginx
+  selector:
+    app: prueba
+  type: NodePort
