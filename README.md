@@ -14,7 +14,8 @@ sudo mv minikube /usr/local/bin/
 ### Kubectl
 
 ```shell
-curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+VERSION_KUBE=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+curl -LO https://storage.googleapis.com/kubernetes-release/release/$VERSION_KUBE/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
 ```
